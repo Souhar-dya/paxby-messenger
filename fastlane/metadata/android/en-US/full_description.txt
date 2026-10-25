@@ -1,0 +1,14 @@
+Paxby is a privacy-first, offline-capable peer-to-peer messenger that discovers nearby devices over Wi-Fi Direct and exchanges end-to-end encrypted messages with no internet connection, user accounts, or central servers required.
+
+Features:
+- Peer-to-peer messaging over Wi-Fi Direct
+- End-to-end encryption with per-identity keys
+- Store-and-forward relay to deliver messages across multiple hops
+- QR-based friend adding
+- Works fully offline between nearby devices
+- No telemetry, trackers, or third-party dependencies
+- No Google Play Services required
+
+Paxby is designed for private, resilient communication in offline or network-constrained environments without relying on cloud-based messengers or phone numbers.
+
+Its unique approach combines Wi-Fi Direct discovery, multi-hop store-and-forward relay, and QR-based trust establishment, all working without any server infrastructure whatsoever.

@@ -1,0 +1,1 @@
+Privacy-first offline-capable peer-to-peer messenger over Wi-Fi Direct
