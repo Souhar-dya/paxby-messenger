@@ -1,0 +1,55 @@
+Categories:
+  - Internet
+  - Messaging
+License: AGPL-3.0-or-later
+AuthorName: Souhardya
+SourceCode: https://github.com/Souhar-dya/paxby-messenger
+IssueTracker: https://github.com/Souhar-dya/paxby-messenger/issues
+
+AutoName: Paxby
+
+Summary: Privacy-first offline-capable peer-to-peer messenger
+Description: |-
+  Paxby is a privacy-first, offline-capable messenger that discovers nearby devices over Wi-Fi Direct and relays messages store-and-forward when peers aren't directly connected. 
+
+  Features:
+  * Peer-to-peer messaging over Wi-Fi Direct with no central server required
+  * End-to-end encryption with per-identity keys
+  * Store-and-forward relay to deliver messages across multiple hops
+  * QR-based friend adding
+  * Works offline between nearby devices
+  * No telemetry or third-party trackers
+
+RepoType: git
+Repo: https://github.com/Souhar-dya/paxby-messenger.git
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 20
+    commit: 96917dc
+    subdir: .
+    sudo:
+      - apt-get update || apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    init: flutter pub get
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter build apk --release --split-per-abi --target-platform android-arm64
+
+MaintainerNotes: |-
+  Uses Wi-Fi Direct for peer discovery. No Google Play Services required.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.3
+CurrentVersionCode: 20
